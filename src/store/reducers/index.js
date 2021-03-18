@@ -16,9 +16,9 @@ export const reducer = (state = initialState, action) => {
         case DATA_SUCCESS: 
             return {
                 ...state,
-                cards: action.payload,
+                data: action.payload,
                 isLoading: false,
-                error: ''
+                error: ""
             };
         case DATA_LOAD_ERR:
             return{

@@ -8,26 +8,46 @@ import {fetchData} from '../store/'
 
 
 const PokeCard = (props) => {
-    const { fetchData } = props;
+    const {fetchData} = props;
+    
     
     
 
     useEffect(() => {
         fetchData();
-      }, [fetchData]);
+    }, [fetchData]);
 
 
     return(
-        <div >
+        <ImgWrapper >
             {props.isLoading ? <h3>Loading data...</h3> : null}
             {props.error ? <p style={{ color: "red" }}>{props.error}</p> : null}   
             {props.data.map((card) => (
-            // <img key = {card.data.id}  src={card.data.images.small} alt=" "/>
-            <p>{card.data.pokemon.id.name}</p>
-            ))}
-        </div>
+            <ImgDiv >
+                <img key={card.index} src={card.imageUrl} alt=" "/>
+
+            </ImgDiv> 
+            
+            
+             ))}
+        </ImgWrapper>
     )
 }
+const ImgDiv = styled.div `
+
+
+display:flex;
+margin: 1%;
+justify-content: center;
+
+`
+const ImgWrapper = styled.div `
+border: 2px solid black;
+display:flex;
+flex-wrap: wrap;
+justify-content: center;
+justify-content: space-around;
+`
 const mapStateToProps = (state) => {
     return {
       isLoading: state.isLoading,

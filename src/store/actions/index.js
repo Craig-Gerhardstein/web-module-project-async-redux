@@ -1,4 +1,7 @@
 import axios from 'axios'
+import pokemon from 'pokemontcgsdk'
+
+pokemon.configure({apiKey: 'f967332d-93a7-44da-ba2a-c2a3bfae9be1'})
 
 export const DATA_LOADING = 'DATA_LOADING';
 export const DATA_SUCCESS = 'DATA_SUCCESS';
@@ -9,10 +12,10 @@ export const fetchData = () => {
        
         dispatch({type:DATA_LOADING});
 
-        axios.get("https://api.pokemontcg.io/v2/cards")
+        axios.get("https://api.pokemontcg.io/v1/cards")
             .then((res) => {
-                console.log(res.data)
-                dispatch({type:DATA_SUCCESS , payload: res.data });
+                console.log(res.data.cards)
+                dispatch({type:DATA_SUCCESS , payload: res.data.cards });
             })
             .catch((err) => {
                 console.log(err.message);

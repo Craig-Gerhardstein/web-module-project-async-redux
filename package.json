@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "i": "^0.3.6",
     "npm": "^7.6.3",
+    "pokemontcgsdk": "^2.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
