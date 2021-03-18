@@ -12,10 +12,10 @@ export const fetchData = () => {
        
         dispatch({type:DATA_LOADING});
 
-        axios.get("https://api.pokemontcg.io/v1/cards")
+        axios.get("https://api.pokemontcg.io/v2/cards")
             .then((res) => {
-                console.log(res.data.cards)
-                dispatch({type:DATA_SUCCESS , payload: res.data.cards });
+                console.log(res.data.data)
+                dispatch({type:DATA_SUCCESS , payload: res.data.data });
             })
             .catch((err) => {
                 console.log(err.message);

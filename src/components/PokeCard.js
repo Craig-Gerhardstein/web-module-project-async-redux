@@ -24,12 +24,12 @@ const PokeCard = (props) => {
             {props.error ? <p style={{ color: "red" }}>{props.error}</p> : null}   
             {props.data.map((card) => (
             <ImgDiv >
-                <img key={card.index} src={card.imageUrl} alt=" "/>
+                <img  src={card.images.small} alt=" "/>
 
             </ImgDiv> 
             
             
-             ))}
+             ))} 
         </ImgWrapper>
     )
 }
