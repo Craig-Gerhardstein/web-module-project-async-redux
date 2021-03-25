@@ -11,8 +11,13 @@ export const fetchData = () => {
     return (dispatch) => {
        
         dispatch({type:DATA_LOADING});
-
-        axios.get("https://api.pokemontcg.io/v2/cards")
+        
+        axios.get("https://api.pokemontcg.io/v2/cards", {
+            headers: {
+                authorization: 'f967332d-93a7-44da-ba2a-c2a3bfae9be1'
+            }
+        })
+        
             .then((res) => {
                 console.log(res.data.data)
                 dispatch({type:DATA_SUCCESS , payload: res.data.data });

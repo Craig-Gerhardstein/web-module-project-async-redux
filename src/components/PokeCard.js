@@ -47,6 +47,7 @@ display:flex;
 flex-wrap: wrap;
 justify-content: center;
 justify-content: space-around;
+background-color: #3D7DCA;
 `
 const mapStateToProps = (state) => {
     return {
