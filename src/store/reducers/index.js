@@ -3,7 +3,8 @@ import {DATA_LOADING, DATA_SUCCESS, DATA_LOAD_ERR} from '../actions'
 const initialState = {
     isLoading: false,
     data: [],
-    error: ""
+    error: "",
+    inputValue: ""
 };
 
 export const reducer = (state = initialState, action) => {
