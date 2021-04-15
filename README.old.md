@@ -12,7 +12,7 @@ Once you have chosen an API to consume, build an app that makes sense for the da
 
 ### Commits
 
-Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
+Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons .
 
 ### Description
 
